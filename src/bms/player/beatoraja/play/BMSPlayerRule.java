@@ -10,15 +10,15 @@ import bms.model.Mode;
  */
 public enum BMSPlayerRule {
 
-	Beatoraja_5(GaugeProperty.FIVEKEYS, JudgeProperty.FIVEKEYS, Mode.BEAT_5K, Mode.BEAT_10K),
-	Beatoraja_7(GaugeProperty.SEVENKEYS, JudgeProperty.SEVENKEYS, Mode.BEAT_7K, Mode.BEAT_14K),
-	Beatoraja_9(GaugeProperty.PMS, JudgeProperty.PMS, Mode.POPN_5K, Mode.POPN_9K),
-	Beatoraja_24(GaugeProperty.KEYBOARD, JudgeProperty.KEYBOARD, Mode.KEYBOARD_24K, Mode.KEYBOARD_24K_DOUBLE),
-	Beatoraja_Other(GaugeProperty.SEVENKEYS, JudgeProperty.SEVENKEYS),
+	Beatoraja_5(GaugeProperty.FIVEKEYS, JudgeProperty.IIDX, Mode.BEAT_5K, Mode.BEAT_10K),
+	Beatoraja_7(GaugeProperty.SEVENKEYS, JudgeProperty.IIDX, Mode.BEAT_7K, Mode.BEAT_14K),
+	Beatoraja_9(GaugeProperty.PMS, JudgeProperty.IIDX, Mode.POPN_5K, Mode.POPN_9K),
+	Beatoraja_24(GaugeProperty.KEYBOARD, JudgeProperty.IIDX, Mode.KEYBOARD_24K, Mode.KEYBOARD_24K_DOUBLE),
+	Beatoraja_Other(GaugeProperty.SEVENKEYS, JudgeProperty.IIDX),
 
-	LR2(GaugeProperty.LR2, JudgeProperty.SEVENKEYS),
+	LR2(GaugeProperty.LR2, JudgeProperty.IIDX),
 
-	Default(GaugeProperty.SEVENKEYS, JudgeProperty.SEVENKEYS),
+	Default(GaugeProperty.SEVENKEYS, JudgeProperty.IIDX),
 ;
 
 	/**

@@ -5,8 +5,35 @@ package bms.player.beatoraja.play;
  *
  * @author exch
  */
+
+// iidx timing windows:
+// 
+// 			(frames)		(ms)				(ms int)
+//  		early	late	early	late		early	late
+// PGREAT	-1		+1		-16.67	+16.67		-16		+16
+// GREAT	-3		+2		-50		+33.33		-50		+33
+// GOOD	    -8		+7		-133.33	+116.67		-133	+116
+// BAD		-18		+17		-300 	+283		-300	+283
+// 
+// timing window definitions below:
+// 
+// normal note   (PGREAT, GREAT, GOOD, BAD, EXCESS POOR)
+// scrath        (PGREAT, GREAT, GOOD, BAD, EXCESS POOR)
+// long note end (PGREAT, GREAT, GOOD, BAD, EXCESS POOR)
+// bss           (PGREAT, GREAT, GOOD, BAD, EXCESS POOR)
+
 public enum JudgeProperty {
 
+    IIDX(
+        new int[][]{ {-16, 16}, {-50, 33}, {-133, 116}, {-300, 283}, {-150, 500} },
+        new int[][]{ {-16, 33}, {-50, 50}, {-133, 116}, {-300, 283}, {-150, 500} },
+        new int[][]{ {-120, 120}, {-160, 160}, {-200, 200}, {-280, 220}},
+        new int[][]{ {-130, 130}, {-170, 170}, {-210, 210}, {-290, 230}},
+        new boolean[]{true, true, true, false, false, true },
+        MissCondition.ALWAYS,
+        new boolean[]{true, true, true, true, true, false },
+        JudgeWindowRule.IIDX
+    ),
     FIVEKEYS(new int[][]{ {-20, 20}, {-50, 50}, {-100, 100}, {-150, 150}, {-150, 500} },
             new int[][]{ {-30, 30}, {-60, 60}, {-110, 110}, {-160, 160}, {-160, 500}},
             new int[][]{ {-120, 120}, {-150, 150}, {-200, 200}, {-250, 250}},
@@ -108,6 +135,14 @@ public enum JudgeProperty {
     }
     
     public enum JudgeWindowRule {
+    	IIDX (new int[]{100, 100, 100, 100, 100}){
+
+			@Override
+			public int[][] create(int[][] org, int judgerank, int[] judgeWindowRate) {
+				return JudgeWindowRule.create(org, judgerank,judgeWindowRate, false);
+			}
+    		
+    	},
     	NORMAL (new int[]{25, 50, 75, 100, 125}){
 
 			@Override
