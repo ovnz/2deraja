@@ -9,6 +9,17 @@ import static bms.player.beatoraja.play.GrooveGauge.GaugeType.*;
  */
 public enum GaugeProperty {
 
+    IIDX(new GaugeElementProperty[]{
+        GaugeElementProperty.IIDX_ASSIST_EASY,
+            GaugeElementProperty.IIDX_EASY,
+            GaugeElementProperty.IIDX_NORMAL,
+            GaugeElementProperty.IIDX_HARD,
+            GaugeElementProperty.IIDX_EXHARD,
+            GaugeElementProperty.IIDX_HAZARD,
+            GaugeElementProperty.IIDX_CLASS,
+            GaugeElementProperty.IIDX_EXCLASS,
+            GaugeElementProperty.IIDX_EXHARDCLASS,
+    }),
     FIVEKEYS(new GaugeElementProperty[]{
             GaugeElementProperty.ASSIST_EASY_5,
                 GaugeElementProperty.EASY_5,
@@ -98,6 +109,61 @@ public enum GaugeProperty {
         CLASS(null ,0 ,100 ,100, 0, new float[]{0.15f, 0.12f, 0.06f, -1.5f, -3f, -1.5f}, new float[][]{{5, 0.4f},{10, 0.5f},{15, 0.6f},{20, 0.7f},{25, 0.8f}}),
         EXCLASS(null ,0 ,100 ,100, 0, new float[]{0.15f, 0.12f, 0.03f, -3.0f, -6.0f, -3.0f}, new float[][]{}),
         EXHARDCLASS(null ,0 ,100 ,100, 0, new float[]{0.15f, 0.06f, 0, -5.0f, -10.0f, -5.0f}, new float[][]{}),
+
+        IIDX_ASSIST_EASY(
+        //  type    min max     init    border
+            TOTAL,  2,  100,    20,     60,
+        //  values          pgreat  great   good    bad     poor    mash poor   guts
+            new float[]{    1.0f,   1.0f,   0.5f,   -3.2f,  -4.8f,  -1.6f},     new float[][]{}
+        ),
+        IIDX_EASY(
+        //  type    min max     init    border
+            TOTAL,  2,  100,    20,     80,
+        //  values          pgreat  great   good    bad     poor    mash poor   guts
+            new float[]{    1.0f,   1.0f,   0.5f,   -3.2f,  -4.8f,  -1.6f},     new float[][]{}
+        ),
+        IIDX_NORMAL(
+        //  type    min max     init    border
+            TOTAL,  2,  100,    20,     80,
+        //  values          pgreat  great   good    bad     poor    mash poor   guts
+            new float[]{    1.0f,   1.0f,   0.5f,   -2f,    -6f,    -2f},       new float[][]{}
+        ),
+        IIDX_HARD(
+        //  type                min max     init    border
+            LIMIT_INCREMENT,    2,  100,    100,     0,
+        //  values          pgreat  great   good    bad     poor    mash poor   guts
+            new float[]{    0.16f,  0.16f,  0.0f,   -5f,    -9f,    -5f},       new float[][]{{30f, 0.5f}}
+        ),
+        IIDX_EXHARD(
+        //  type                min max     init    border
+            LIMIT_INCREMENT,    2,  100,    100,     0,
+        //  values          pgreat  great   good    bad     poor    mash poor   guts
+            new float[]{    0.16f,  0.16f,  0.0f,   -10f,   -18f,   -10f},      new float[][]{}
+        ),
+        IIDX_HAZARD(
+        //  type                min max     init    border
+            LIMIT_INCREMENT,    2,  100,    100,    0,
+        //  values          pgreat  great   good    bad         poor        mash poor   guts
+            new float[]{    0.15f,  0.06f,  0,      -100.0f,    -100.0f,    -10.0f},    new float[][]{}
+        ),
+        IIDX_CLASS(
+        //  type                min max     init    border
+            LIMIT_INCREMENT,    2,  100,    100,     0,
+        //  values          pgreat  great   good    bad     poor    mash poor   guts
+            new float[]{    0.16f,  0.16f,  0.04f,  -1.5f,  -2.5f,  -1.5f},     new float[][]{{30f, 0.5f}}
+        ),
+        IIDX_EXCLASS(
+        //  type                min max     init    border
+            LIMIT_INCREMENT,    2,  100,    100,     0,
+        //  values          pgreat  great   good    bad     poor    mash poor   guts
+            new float[]{    0.16f,  0.16f,  0.04f,  -3f,    -5f,    -3f},       new float[][]{}
+        ),
+        IIDX_EXHARDCLASS(
+        //  type                min max     init    border
+            LIMIT_INCREMENT,    2,  100,    100,     0,
+        //  values          pgreat  great   good    bad     poor    mash poor   guts
+            new float[]{    0.16f,  0.16f,  0.0f,   -5f,    -9f,     -5f},      new float[][]{}
+        ),
 
         ASSIST_EASY_PMS(TOTAL ,2, 120, 30, 65, new float[]{1.0f, 1.0f, 0.5f, -1.0f, -2.0f, -2.0f}, new float[][]{}),
         EASY_PMS(TOTAL ,2, 120, 30, 85, new float[]{1.0f, 1.0f, 0.5f, -1.0f, -3.0f, -3.0f}, new float[][]{}),
