@@ -745,7 +745,7 @@ public class MainController extends ApplicationAdapter {
 	}
 	
 	public static String getVersion() {
-		return VERSION;
+		return VERSION.replace("beatoraja", "2deraja");
 	}
 
 	abstract class UpdateThread extends Thread {
