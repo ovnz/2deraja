@@ -254,6 +254,22 @@ public class GrooveGauge {
 	}
 	
 	public enum GaugeType {
+		IIDX_NORMAL {
+			@Override
+			public float modify(float f, BMSModel model) {
+				if (f > 0) {
+					return a((float) model.getTotalNotes()) * f;
+				} else {
+					return f;
+				}
+			}
+		},
+		IIDX_SURVIVAL {
+			@Override
+			public float modify(float f, BMSModel model) {
+				return f;
+			}
+		},
 		/**
 		 * 回復量にTOTALを使用
 		 */
@@ -324,5 +340,11 @@ public class GrooveGauge {
 		;
 
 		public abstract float modify(float f, BMSModel model);
+		
+		// a function of total note count in IIDX, but depends on chart (https://github.com/minsang-github/rhythmgame-docs/wiki/IIDX-LR2-beatoraja-differences)
+		// taken from https://hitkey.nekokan.dyndns.info/cmds.htm#TOTAL for the time being
+		public float a(float notes) {
+			return 7.605f / (0.01f * notes + 6.5f);
+		}
 	}
 }
