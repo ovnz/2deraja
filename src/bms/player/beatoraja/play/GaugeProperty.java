@@ -131,37 +131,37 @@ public enum GaugeProperty {
         ),
         IIDX_HARD(
         //  type                        min max     init    border
-            GaugeType.IIDX_SURVIVAL,    2,  100,    100,     0,
+            GaugeType.IIDX_SURVIVAL,    0,  100,    100,     0,
         //  values          pgreat  great   good    bad     poor    mash poor   guts
             new float[]{    0.16f,  0.16f,  0.0f,   -5f,    -9f,    -5f},       new float[][]{{30f, 0.5f}}
         ),
         IIDX_EXHARD(
         //  type                        min max     init    border
-            GaugeType.IIDX_SURVIVAL,    2,  100,    100,     0,
+            GaugeType.IIDX_SURVIVAL,    0,  100,    100,     0,
         //  values          pgreat  great   good    bad     poor    mash poor   guts
             new float[]{    0.16f,  0.16f,  0.0f,   -10f,   -18f,   -10f},      new float[][]{}
         ),
         IIDX_HAZARD(
         //  type                        min max     init    border
-            GaugeType.IIDX_SURVIVAL,    2,  100,    100,    0,
+            GaugeType.IIDX_SURVIVAL,    0,  100,    100,    0,
         //  values          pgreat  great   good    bad         poor        mash poor   guts
             new float[]{    0.15f,  0.06f,  0,      -100.0f,    -100.0f,    -10.0f},    new float[][]{}
         ),
         IIDX_CLASS(
         //  type                        min max     init    border
-            GaugeType.IIDX_SURVIVAL,    2,  100,    100,     0,
+            GaugeType.IIDX_SURVIVAL,    0,  100,    100,     0,
         //  values          pgreat  great   good    bad     poor    mash poor   guts
             new float[]{    0.16f,  0.16f,  0.04f,  -1.5f,  -2.5f,  -1.5f},     new float[][]{{30f, 0.5f}}
         ),
         IIDX_EXCLASS(
         //  type                        min max     init    border
-            GaugeType.IIDX_SURVIVAL,    2,  100,    100,     0,
+            GaugeType.IIDX_SURVIVAL,    0,  100,    100,     0,
         //  values          pgreat  great   good    bad     poor    mash poor   guts
             new float[]{    0.16f,  0.16f,  0.04f,  -3f,    -5f,    -3f},       new float[][]{}
         ),
         IIDX_EXHARDCLASS(
         //  type                        min max     init    border
-            GaugeType.IIDX_SURVIVAL,    2,  100,    100,     0,
+            GaugeType.IIDX_SURVIVAL,    0,  100,    100,     0,
         //  values          pgreat  great   good    bad     poor    mash poor   guts
             new float[]{    0.16f,  0.16f,  0.0f,   -5f,    -9f,     -5f},      new float[][]{}
         ),
