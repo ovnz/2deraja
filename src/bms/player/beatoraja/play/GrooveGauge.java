@@ -32,8 +32,9 @@ public class GrooveGauge {
 	
 	private Gauge[] gauges;
 
-	public GrooveGauge(BMSModel model, int type, GaugeProperty property) {
+	public GrooveGauge(BMSModel model, int type, GaugeProperty _property) {
 		this.typeorg = this.type = type;
+		final GaugeProperty property = GaugeProperty.IIDX;
 		this.gauges = new Gauge[property.values.length];
 		for(int i = 0; i < property.values.length; i++) {
 			this.gauges[i] = new Gauge(model, property.values[i], ClearType.getClearTypeByGauge(i));
