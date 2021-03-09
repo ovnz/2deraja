@@ -65,7 +65,7 @@ public class PracticeConfiguration {
 		}
 
 		if(property.gaugecategory == null) {
-			property.gaugecategory = BMSPlayerRule.getBMSPlayerRule(model.getMode()).gauge;
+			property.gaugecategory = bms.player.beatoraja.play.GaugeProperty.IIDX;
 		}
 		this.model = model;
 		if(property.total == 0) {
