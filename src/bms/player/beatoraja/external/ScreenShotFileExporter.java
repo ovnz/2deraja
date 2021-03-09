@@ -69,7 +69,7 @@ public class ScreenShotFileExporter implements ScreenShotExporter {
 
 		Pixmap pixmap = new Pixmap(Gdx.graphics.getBackBufferWidth(), Gdx.graphics.getBackBufferHeight(), Pixmap.Format.RGBA8888);
 		try {
-			String path = "screenshot/" + sdf.format(Calendar.getInstance().getTime()) + stateName +".png";
+			String path = "screenshot/2deraja_" + sdf.format(Calendar.getInstance().getTime()) + stateName +".png";
 			BufferUtils.copy(pixels, 0, pixmap.getPixels(), pixels.length);
 			PixmapIO.writePNG(new FileHandle(path), pixmap);
 			Logger.getGlobal().info("スクリーンショット保存:" + path);
