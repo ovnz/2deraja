@@ -7,6 +7,7 @@ package bms.player.beatoraja.play;
  */
 
 // iidx timing windows:
+// https://zenius-i-vanisher.com/v5.2/viewthread.php?threadid=5233
 // 
 // 			(frames)		(ms)				(ms int)
 //  		early	late	early	late		early	late
@@ -18,15 +19,15 @@ package bms.player.beatoraja.play;
 // timing window definitions below:
 // 
 // normal note   (PGREAT, GREAT, GOOD, BAD, EXCESS POOR)
-// scrath        (PGREAT, GREAT, GOOD, BAD, EXCESS POOR)
+// scratch       (PGREAT, GREAT, GOOD, BAD, EXCESS POOR)
 // long note end (PGREAT, GREAT, GOOD, BAD, EXCESS POOR)
 // bss           (PGREAT, GREAT, GOOD, BAD, EXCESS POOR)
 
 public enum JudgeProperty {
 
     IIDX(
-        new int[][]{ {-16, 16}, {-50, 33}, {-133, 116}, {-300, 283}, {-150, 500} },
-        new int[][]{ {-16, 33}, {-50, 50}, {-133, 116}, {-300, 283}, {-150, 500} },
+        new int[][]{ {-16 - 8, 16 - 8}, {-50 - 8, 33 - 8}, {-133 - 8, 116 - 8}, {-300 - 8, 283 - 8}, {-150, 500} },
+        new int[][]{ {-16 - 8, 33 - 8}, {-50 - 8, 50 - 8}, {-133 - 8, 116 - 8}, {-300 - 8, 283 - 8}, {-150, 500} },
         new int[][]{ {-120, 120}, {-160, 160}, {-200, 200}, {-280, 220}},
         new int[][]{ {-130, 130}, {-170, 170}, {-210, 210}, {-290, 230}},
         new boolean[]{true, true, true, false, false, true },
