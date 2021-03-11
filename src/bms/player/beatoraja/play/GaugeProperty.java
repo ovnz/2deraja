@@ -113,19 +113,19 @@ public enum GaugeProperty {
 
         IIDX_ASSIST_EASY(
         //  type                    min max     init    border
-            GaugeType.IIDX_NORMAL,  2,  100,    20,     60,
+            GaugeType.IIDX_NORMAL,  2,  100,    22,     60,
         //  values          pgreat  great   good    bad     poor    mash poor   guts
             new float[]{    1.0f,   1.0f,   0.5f,   -3.2f,  -4.8f,  -1.6f},     new float[][]{}
         ),
         IIDX_EASY(
         //  type                    min max     init    border
-            GaugeType.IIDX_NORMAL,  2,  100,    20,     80,
+            GaugeType.IIDX_NORMAL,  2,  100,    22,     80,
         //  values          pgreat  great   good    bad     poor    mash poor   guts
             new float[]{    1.0f,   1.0f,   0.5f,   -3.2f,  -4.8f,  -1.6f},     new float[][]{}
         ),
         IIDX_NORMAL(
         //  type                    min max     init    border
-            GaugeType.IIDX_NORMAL,  2,  100,    20,     80,
+            GaugeType.IIDX_NORMAL,  2,  100,    22,     80,
         //  values          pgreat  great   good    bad     poor    mash poor   guts
             new float[]{    1.0f,   1.0f,   0.5f,   -2f,    -6f,    -2f},       new float[][]{}
         ),
