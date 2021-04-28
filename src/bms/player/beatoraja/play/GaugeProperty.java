@@ -115,13 +115,13 @@ public enum GaugeProperty {
         //  type                    min max     init    border
             GaugeType.IIDX_NORMAL,  2,  100,    22,     60,
         //  values          pgreat  great   good    bad     poor    mash poor   guts
-            new float[]{    1.0f,   1.0f,   0.5f,   -3.2f,  -4.8f,  -1.6f},     new float[][]{}
+            new float[]{    1.0f,   1.0f,   0.5f,   -1.6f,  -4.8f,  -1.6f},     new float[][]{}
         ),
         IIDX_EASY(
         //  type                    min max     init    border
             GaugeType.IIDX_NORMAL,  2,  100,    22,     80,
         //  values          pgreat  great   good    bad     poor    mash poor   guts
-            new float[]{    1.0f,   1.0f,   0.5f,   -3.2f,  -4.8f,  -1.6f},     new float[][]{}
+            new float[]{    1.0f,   1.0f,   0.5f,   -1.6f,  -4.8f,  -1.6f},     new float[][]{}
         ),
         IIDX_NORMAL(
         //  type                    min max     init    border
@@ -145,7 +145,7 @@ public enum GaugeProperty {
         //  type                        min max     init    border
             GaugeType.IIDX_SURVIVAL,    0,  100,    100,    0,
         //  values          pgreat  great   good    bad         poor        mash poor   guts
-            new float[]{    0.15f,  0.06f,  0,      -100.0f,    -100.0f,    -10.0f},    new float[][]{}
+            new float[]{    0.15f,  0.06f,  0.0f,   -100.0f,    -100.0f,    -10.0f},    new float[][]{}
         ),
         IIDX_CLASS(
         //  type                        min max     init    border
@@ -163,7 +163,7 @@ public enum GaugeProperty {
         //  type                        min max     init    border
             GaugeType.IIDX_SURVIVAL,    0,  100,    100,     0,
         //  values          pgreat  great   good    bad     poor    mash poor   guts
-            new float[]{    0.16f,  0.16f,  0.0f,   -5f,    -9f,     -5f},      new float[][]{}
+            new float[]{    0.16f,  0.16f,  0.04f,  -6f,    -10f,   -6f},       new float[][]{}
         ),
 
         ASSIST_EASY_PMS(TOTAL ,2, 120, 30, 65, new float[]{1.0f, 1.0f, 0.5f, -1.0f, -2.0f, -2.0f}, new float[][]{}),
